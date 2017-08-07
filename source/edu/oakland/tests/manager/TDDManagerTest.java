@@ -1,10 +1,11 @@
 import org.junit.*;
 import org.junit.runner.RunWith;
 import edu.production.*;
+import org.junit.assert.*;
 
 
 public class TDDManagerTest {
-	private TicTacToeManager manager;
+	private TTTManager manager;
 	
 	@Before
 	// create display and manager classes

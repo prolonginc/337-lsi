@@ -10,7 +10,6 @@ public class TDDManagerTest {
 	// create display and manager classes
 	public void initializeSystem() {
 		manager = new TicTacToeManager();
-		display = new Display();
 	}
 	
 	@Test
@@ -31,9 +30,15 @@ public class TDDManagerTest {
 		assertTrue(true);
 	}
 	
-	@Test
+	/*@Test
 	public void test_Initial_Win_Or_Draw_is_false() {
 		manager.checkForWinOrDraw();
-		assertTrue(true);
+		assertFalse(manager.getWinOrDraw());
 	}
+	
+	@Test
+	public void test_WinOrDraw_Win() {
+		manager.checkForWinOrDraw();
+		assertFalse(manager.getWinOrDraw());
+	}*/
 }

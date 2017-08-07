@@ -66,9 +66,9 @@ public char getCurrentPlayer(){
 
 }
 
-public char getGameIsOver();{
+public boolean getGameIsOver();{
 	
-	return this.gameIsOver
+	return this.gameIsOver;
 }
 
 

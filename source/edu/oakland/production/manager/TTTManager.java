@@ -11,7 +11,7 @@ private TTTMiddleware middleware;
 private TTTDatabase database;
 private Scanner scanner;
 private char currentPlayer;
-private char currentPlayerMark;
+// private char currentPlayerMark;
 private boolean isWinOrDrawResult; 
 private boolean gameIsOver;
 //private TTTDatabase database;
@@ -41,13 +41,13 @@ public void launchapp() {
 	display.printCurrentBoard();
 	
 	// giving display current team, 
-	display.placeMarkOnBoard(this.currentplayer);
+	display.placeMarkOnBoard(this.currentPlayer);
 	
 	// Checking if game is over
 	this.gameIsOver = display.checkForWinOrDraw();
 
 	// changing the player 
-	changePlayer(currentplayer);
+	changePlayer();
 	}
 }
 
@@ -63,7 +63,7 @@ private void changePlayer(){
 }
 
 public char getCurrentPlayer(){
-	return currentPlayer;
+	return this.currentPlayer;
 }
 
 public boolean getGameIsOver(){

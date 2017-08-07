@@ -55,8 +55,8 @@ while(this.gameIsOver == false){
 private changePlayer(this.currentplayer){
 	// changing the player
 if (this.currentPlayer == 'x') {
-		this.currentPlayer='o'
-	elseif (this.currentPlayer=='o'){
+		this.currentPlayer='o';
+	else {
 		this.currentPlayer='x';
 	}
 }

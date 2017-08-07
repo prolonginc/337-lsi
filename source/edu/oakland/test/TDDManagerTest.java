@@ -5,7 +5,6 @@ import edu.production.*;
 
 public class TDDManagerTest {
 	private TicTacToeManager manager;
-	private TTTDisplay display;
 	
 	@Before
 	// create display and manager classes
@@ -15,13 +14,20 @@ public class TDDManagerTest {
 	}
 	
 	@Test
+	public void testChooseSquare() {
+		manage.chooseSquare();
+		assertTrue(true);
+	}
+	
+	@Test
 	public void testPrintCurrentBoard() {
+		manager.printCurrentBoard();
 		assertTrue(true);
 	}
 	
 	@Test
 	public void testChangePlayer() {
-		display.changePlayer();
+		manager.changePlayers();
 		assertTrue(true);
 	}
 	

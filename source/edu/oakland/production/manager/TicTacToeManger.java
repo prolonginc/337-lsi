@@ -42,7 +42,7 @@ while(this.gameIsOver == false){
 	display.printCurrentBoard();
 	
 	// giving display current team, 
-	display.chooseSquare(this.currentplayer);
+	display.placeMarkOnBoard(this.currentplayer);
 	
 	// Checking if game is over
 	this.gameIsOver = display.checkForWinOrDraw();
@@ -70,7 +70,6 @@ public boolean getGameIsOver();{
 	
 	return this.gameIsOver;
 }
-
 
 
 

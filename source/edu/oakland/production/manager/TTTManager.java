@@ -3,7 +3,7 @@ package edu.oakland.helper;
 import edu.oakland.production.*; 
 import java.util.*; 
 
-public class TicTacToeManager{
+public class TTTManager{
 
  // reference variable for subsystems
 private TTTDisplay display;
@@ -14,14 +14,13 @@ private char currentPlayer;
 private char currentPlayerMark;
 private boolean isWinOrDrawResult; 
 private boolean gameIsOver;
-private TTTDatabase database;
+//private TTTDatabase database;
 
 // provide method to launch s intialize; must do TTTDatabase first;
-	public TTTManager(){
+	public TTTManager() {
 	this.gameIsOver = false;
 	this.currentPlayer = 'x';
 	}
-
 public void launchapp() {
 	
 // creating new instrances of database, middleware, and display with information revelant to the current turn
@@ -34,8 +33,8 @@ public void launchapp() {
 	this.display = TTTDisplay(this.middlware);
 	
 
-// this may need to be its own method
-while(this.gameIsOver == false){
+	// this may need to be its own method
+	while(this.gameIsOver == false){
 	
 	
 	//Displaying the board
@@ -48,14 +47,16 @@ while(this.gameIsOver == false){
 	this.gameIsOver = display.checkForWinOrDraw();
 
 	// changing the player 
-	changePlayer(this.currentplayer);
+	changePlayer(currentplayer);
 	}
 }
 
-private changePlayer(this.currentplayer){
+
+private void changePlayer(){
 	// changing the player
-if (this.currentPlayer == 'x') {
+	if (this.currentPlayer == 'x') {
 		this.currentPlayer='o';
+	}
 	else {
 		this.currentPlayer='x';
 	}
@@ -63,12 +64,11 @@ if (this.currentPlayer == 'x') {
 
 public char getCurrentPlayer(){
 	return currentPlayer;
-
 }
 
-public boolean getGameIsOver();{
-	
+public boolean getGameIsOver(){
 	return this.gameIsOver;
+}
 }
 
 

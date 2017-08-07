@@ -30,15 +30,15 @@ public class TDDManagerTest {
 		assertTrue(true);
 	}
 	
-	/*@Test
+	@Test
 	public void test_Initial_Win_Or_Draw_is_false() {
 		manager.checkForWinOrDraw();
-		assertFalse(manager.getWinOrDraw());
+		assertFalse(manager.gameIsOver());
 	}
 	
 	@Test
 	public void test_WinOrDraw_Win() {
 		manager.checkForWinOrDraw();
-		assertFalse(manager.getWinOrDraw());
-	}*/
+		assertFalse(manager.gameIsOver());
+	}
 }

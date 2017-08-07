@@ -26,8 +26,20 @@ public class TDDManagerTest {
 	
 	@Test
 	public void testChangePlayer() {
+		char current = getCurrentPlayer();
+		char temp = 'O';
+		
+		if ( current == 'X' ) temp = 'O';
 		manager.changePlayers();
-		assertTrue(true);
+		
+		boolean resultX = ( temp == current);
+		
+		if ( current == 'O' ) temp = 'X';
+		manager.changePlayers();
+		
+		boolean resultO = (temp == current);
+	
+		assertTrue(resultX && resultO);		
 	}
 	
 	@Test
@@ -38,6 +50,7 @@ public class TDDManagerTest {
 	
 	@Test
 	public void test_WinOrDraw_Win() {
+		//Play the game
 		manager.checkForWinOrDraw();
 		assertFalse(manager.gameIsOver());
 	}

@@ -61,6 +61,17 @@ if (this.currentPlayer == 'x') {
 	}
 }
 
+public char getCurrentPlayer(){
+	return currentPlayer;
+
+}
+
+public char getGameIsOver();{
+	
+	return this.gameIsOver
+}
+
+
 
 
 

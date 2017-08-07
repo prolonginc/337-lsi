@@ -31,4 +31,9 @@ public class TDDManagerTest {
 		assertTrue(true);
 	}
 	
+	@Test
+	public void test_Initial_Win_Or_Draw_is_false() {
+		manager.checkForWinOrDraw();
+		assertTrue(true);
+	}
 }

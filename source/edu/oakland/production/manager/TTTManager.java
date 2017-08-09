@@ -24,7 +24,7 @@ private boolean gameIsOver;
 	this.gameIsOver = false;
 	this.currentPlayer = 'x';
 	}
-public void launchapp() {
+public void launchApp() {
 
 // creating new instrances of database, middleware, and display with information revelant to the current turn
 // launch a initialize database; make sure all cells are empty;

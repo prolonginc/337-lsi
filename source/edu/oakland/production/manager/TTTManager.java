@@ -52,7 +52,7 @@ public void launchapp() {
 public void placeMarkOnBoard(){
 
 
-	this.display.placeMarkOnBoard(this.currentPlayer)
+	this.display.placeMarkOnBoard(this.currentPlayer);
 }
 
 public boolean checkForWinOrDraw(){

@@ -1,6 +1,9 @@
 package edu.oakland.helper;
 
-import edu.oakland.production.*;
+import edu.oakland.production.manager.*;
+import edu.oakland.production.display.*;
+import edu.oakland.production.middleware.*;
+import edu.oakland.production.database.*;
 import java.util.*;
 
 public class TTTManager{

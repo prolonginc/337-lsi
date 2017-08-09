@@ -48,7 +48,7 @@ public void launchApp() {
 	this.gameIsOver = this.checkForWinOrDraw();
 
 	// changing the player
-	changePlayer();
+	this.changePlayer();
 	}
 }
 
@@ -67,10 +67,10 @@ public boolean checkForWinOrDraw(){
 private void changePlayer(){
 	// changing the player
 	if (this.currentPlayer == 'x') {
-		this.currentPlayer='o';
+		this.currentPlayer = 'o';
 	}
 	else {
-		this.currentPlayer='x';
+		this.currentPlayer = 'x';
 	}
 }
 

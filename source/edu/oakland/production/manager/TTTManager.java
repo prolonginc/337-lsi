@@ -22,7 +22,7 @@ private boolean gameIsOver;
 // provide method to launch s intialize; must do TTTDatabase first;
 	public TTTManager() {
 	this.gameIsOver = false;
-	this.currentPlayer = 'x';
+	this.currentPlayer = 'X';
 	}
 public void launchApp() {
 
@@ -66,11 +66,11 @@ public boolean checkForWinOrDraw(){
 
 private void changePlayer(){
 	// changing the player
-	if (this.currentPlayer == 'x') {
-		this.currentPlayer = 'o';
+	if (this.currentPlayer == 'X') {
+		this.currentPlayer = 'O';
 	}
 	else {
-		this.currentPlayer = 'x';
+		this.currentPlayer = 'X';
 	}
 }
 

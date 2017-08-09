@@ -32,8 +32,8 @@ public void launchapp() {
 // launch a initialize display; pass in middleware ref;
 
 	this.database = new TTTDatabase();
-	this.middleware = TTTMiddleware(this.database);
-	this.display = TTTDisplay(this.middlware);
+	this.middleware = new TTTMiddleware(this.database);
+	this.display = new TTTDisplay(this.middleware);
 
 
 	// this may need to be its own method

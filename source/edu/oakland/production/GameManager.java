@@ -11,7 +11,7 @@ TTTManager manager = new TTTManager();
 // launch and initialize all TTTgame classes;
 manager.launchApp();
 
-manager.chooseSquare();
+// manager.chooseSquare();
 }
 
 

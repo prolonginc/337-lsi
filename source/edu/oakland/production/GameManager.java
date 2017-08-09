@@ -3,7 +3,7 @@ package edu.oakland.helper;
 import edu.oakland.production.manager.*;
 import java.util.*;
 
-public class GamerManager{
+public class GameManager{
 
 public static void main(String[] args) {
 // create instance of TTTManager;

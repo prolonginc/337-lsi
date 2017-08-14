@@ -59,17 +59,12 @@ public class TDDManagerTest {
 	//Need interface classes to play game
 	
 	@Test
-	public void test_WinOrDraw_Win() {
-		//Play the game
-		manager.checkForWinOrDraw();
+	public void test_WinOrDraw() {
+		//Play the game, win condition
+		TTTManager play = new TTTManager();
+		play.launchApp();
 		assertFalse(manager.getGameIsOver());
 	}
-	
-	@Test
-	public void test_WinOrDraw_Draw() {
-		//Play the game
-		manager.checkForWinOrDraw();
-		assertFalse(manager.getGameIsOver());
-	}
+
 
 }

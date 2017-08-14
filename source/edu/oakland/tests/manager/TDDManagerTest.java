@@ -18,54 +18,45 @@ public class TDDManagerTest {
 	// create display and manager classes
 	public void initializeSystem() {
 		manager = new TTTManager();
-		database = new TTTDatabase();
-		middleware = new TTTMiddleware(database);
-		display = new TTTDisplay(middleware);
 	}
-	
+		
+	@Test
+	public void test_Initial_Win_Or_Draw_is_false() {	
+		assertFalse(manager.getGameIsOver());
+	}
+
 	@Test
 	public void testPlaceMarkOnBoard() {
-		//manager.placeMarkOnBoard();
+		manager.placeMarkOnBoard();	
 	}
 	
 	@Test
 	public void testPrintCurrentBoard() {
-		//manager.printCurrentBoard();
+		manager.printCurrentBoard();
 	}
 	
 	@Test
 	public void testChangePlayer() {
-		/*
-		char current = manager.getCurrentPlayer();
+		
 		char temp = 'O';
 		
-		if ( current == 'X' ) temp = 'O';
+		if ( manager.getCurrentPlayer() == 'X' ) temp = 'O';
 		manager.changePlayer();
 		
-		boolean resultX = ( temp == current);
+		boolean resultX = ( temp == manager.getCurrentPlayer());
 		
-		if ( current == 'O' ) temp = 'X';
+		if ( manager.getCurrentPlayer() == 'O' ) temp = 'X';
 		manager.changePlayer();
 		
-		boolean resultO = (temp == current);
+		
+		
+		boolean resultO = (temp == manager.getCurrentPlayer());
 	
 		assertTrue(resultX && resultO);		
-		*/
+		
 	}
 	
-	@Test
-	public void test_Initial_Win_Or_Draw_is_false() {	
-		//manager.checkForWinOrDraw();
-		//assertFalse(manager.getGameIsOver());
-	}
-	
-	/* Must Wait on interface classes to write tests
-	@Test
-	public void test_WinOrDraw_Win() {
-		//Play the game
-		manager.checkForWinOrDraw();
-		assertFalse(manager.getGameIsOver());
-	}
+	//Need interface classes to play game
 	
 	@Test
 	public void test_WinOrDraw_Win() {
@@ -73,5 +64,12 @@ public class TDDManagerTest {
 		manager.checkForWinOrDraw();
 		assertFalse(manager.getGameIsOver());
 	}
-	*/
+	
+	@Test
+	public void test_WinOrDraw_Draw() {
+		//Play the game
+		manager.checkForWinOrDraw();
+		assertFalse(manager.getGameIsOver());
+	}
+
 }

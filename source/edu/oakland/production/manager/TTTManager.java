@@ -23,6 +23,9 @@ private boolean gameIsOver;
 	public TTTManager() {
 	this.gameIsOver = false;
 	this.currentPlayer = 'X';
+	this.database = new TTTDatabase();
+	this.middleware = new TTTMiddleware(this.database);
+	this.display = new TTTDisplay(this.middleware);
 	}
 public void launchApp() {
 
@@ -30,11 +33,6 @@ public void launchApp() {
 // launch a initialize database; make sure all cells are empty;
 // launch a intialize middleware; pass in database ref;
 // launch a initialize display; pass in middleware ref;
-
-	this.database = new TTTDatabase();
-	this.middleware = new TTTMiddleware(this.database);
-	this.display = new TTTDisplay(this.middleware);
-
 
 	// this may need to be its own method
 	while(this.gameIsOver == false){
@@ -53,8 +51,6 @@ public void launchApp() {
 }
 
 public void placeMarkOnBoard(){
-
-
 	this.display.placeMarkOnBoard(this.currentPlayer);
 }
 
@@ -64,7 +60,7 @@ public boolean checkForWinOrDraw(){
 
 }
 
-private void changePlayer(){
+public void changePlayer(){
 	// changing the player
 	if (this.currentPlayer == 'X') {
 		this.currentPlayer = 'O';
